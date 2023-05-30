@@ -3,9 +3,7 @@ import tempfile
 import unittest
 import textwrap
 from pathlib import Path
-
 import yaml
-
 
 from src.extract_crd import extract_crds_from_rendered_yaml
 
@@ -63,13 +61,21 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   name: crd1
+
 ---
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   name: crd2
+
+---
 """
-            self.assertTrue(expected_yaml.strip(), concatenated_yaml.strip())
+            print('# EXPECTED YAML:')
+            print(expected_yaml, '  ')
+            print('# ACTUAL YAML:')
+            print(concatenated_yaml, '  ')
+
+            self.assertEqual(concatenated_yaml, expected_yaml)
 
 if __name__ == '__main__':
     unittest.main()

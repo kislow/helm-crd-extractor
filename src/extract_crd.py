@@ -18,4 +18,4 @@ def extract_crds_from_rendered_yaml(yaml_file, output_dir) -> None:
     output_file = os.path.join(output_dir, 'crdsOnly.yaml')
     with open(output_file, 'w') as output:
         output.write(concatenated_crd_yaml)
-    print(f"Concatenated CRDs: {output_file}")
+    print(f"Concatenated CRDs: {output_file}\n")
