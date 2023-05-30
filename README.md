@@ -6,9 +6,13 @@ The CRD Extractor is a Python script that enables you to extract Custom Resource
 
 `pip3 install -r requirements.txt`
 
+# Run Test
+
+` python3 -m unittest tests.test_extract_crd`
+
 # Usage
 
-`python main.py --file <rendered_yaml_file> --path <output_dir>`
+`python3 main.py --file <rendered_yaml_file> --path <output_dir>`
 
 # License
 
