@@ -26,10 +26,10 @@ $ python3 main.py --file <rendered_yaml_file> --path <output_dir>`
 * Non-CRD objects will be saved in a separate file with the same `---` delimiters.
 * The script will display the paths of the generated files after completion.
 
-# Run Test
+# Test
 
 ```sh
-$ python3 -m unittest tests.test_extract_crd`
+$ python3 -m unittest tests.test_extract_crd
 ```
 
 # License
